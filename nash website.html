@@ -6,7 +6,7 @@
     <title>stanburn.clo</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
@@ -158,7 +158,7 @@
               <img
                 src="stburnclth.boxy.jfif"
                 class="card-img-top product-img"
-                alt="Stanburn Heavyweight Boxy Crop Tee"
+                alt="Stanburn Polo Boxy Crop Tee"
               />
               <div class="card-body d-flex flex-column p-4">
                 <div
@@ -177,7 +177,7 @@
                 </p>
                 <button
                   class="btn btn-dark w-100 rounded-3 mt-3 py-2 fw-medium"
-                  onclick="addToCart('Heavyweight Boxy Crop', 850)"
+                  onclick="addToCart('Polo Boxy Crop', 850)"
                 >
                   Add to Bag
                 </button>
@@ -192,7 +192,7 @@
               <img
                 src="stanburn-capp.clo.jpg"
                 class="card-img-top product-img"
-                alt="Stanburn Washed Twill Hat"
+                alt="Stanburn Flat Flammed Baseball Hat"
               />
 
               <div class="card-body d-flex flex-column p-4">
@@ -229,7 +229,7 @@
               <img
                 src="stanburn-loafers.clo.jpg"
                 class="card-img-top product-img"
-                alt="Washed Twill Cap"
+                alt=" Row Loafer "
               />
               <div class="card-body d-flex flex-column p-4">
                 <div
@@ -248,7 +248,7 @@
                 </p>
                 <button
                   class="btn btn-dark w-100 rounded-3 mt-3 py-2 fw-medium"
-                  onclick="addToCart('SB-01 Vulc Low Shoes', 2450)"
+                  onclick="addToCart('Row Loafer Shoe', 2450)"
                 >
                   Add to Bag
                 </button>
@@ -259,6 +259,283 @@
       </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <section id="about" class="bg-white border-top border-bottom py-5">
+      <div class="container py-4">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <p class="text-uppercase text-muted small fw-semibold mb-1">
+              Behind the Label
+            </p>
+            <h2 class="fw-bold mb-3">Built from the Ground Up in Pampanga</h2>
+            <p class="text-muted">
+              Founded by <strong>Nash Calma</strong>,
+              <strong>stanburn.clo</strong> started with a simple goal craft
+              accessible, well-proportioned streetwear staples that feel right
+              at home on the streets of Angeles City.
+            </p>
+            <p class="text-muted mb-0">
+              From our signature boxy crop tees to everyday caps and vulcanized
+              shoes, every piece is designed for comfort, durability, and
+              effortless styling.
+            </p>
+          </div>
+
+          <div id="location" class="col-lg-6">
+            <div class="p-4 p-md-5 bg-light rounded-4 border">
+              <span class="badge bg-dark text-white mb-2">Flagship Spot</span>
+              <h4 class="fw-bold mb-2">Visit Our Store</h4>
+              <p class="text-muted mb-3">
+                Drop by to check sizing, feel the fabric weight, and cop
+                exclusive in-store colorways.
+              </p>
+              <ul class="list-unstyled mb-4 small">
+                <li class="mb-2">
+                  <strong>Address:</strong> Balibago, Angeles City, Pampanga,
+                  Philippines
+                </li>
+                <li class="mb-2">
+                  <strong>Store Hours:</strong> Mon – Sun, 11:00 AM – 7:00 PM
+                </li>
+                <li><strong>Founder:</strong> Nash D. Calma</li>
+              </ul>
+              <button
+                class="btn btn-outline-dark rounded-3 btn-sm px-3 py-2"
+                data-bs-toggle="modal"
+                data-bs-target="#inquireModal"
+              >
+                Message / Inquire Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <selection-tag
+      ><div
+        class="modal fade"
+        id="cartModal"
+        tabindex="-1"
+        aria-labelledby="cartModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content rounded-4 border-0">
+            <div class="modal-header border-bottom-0">
+              <h5 class="modal-title fw-bold" id="cartModalLabel">
+                Your Shopping Bag
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <ul id="cartItemsList" class="list-group list-group-flush mb-3">
+                <li class="list-group-item text-muted text-center py-4">
+                  Nothing in your bag yet. Time to cop something!
+                </li>
+              </ul>
+              <div class="d-flex justify-content-between fw-bold fs-5 px-2">
+                <span>Total:</span>
+                <span id="cartTotal">₱0</span>
+              </div>
+            </div>
+            <div class="modal-footer border-top-0">
+              <button
+                type="button"
+                class="btn btn-outline-secondary rounded-3"
+                onclick="clearCart()"
+              >
+                Empty Bag
+              </button>
+              <button
+                type="button"
+                class="btn btn-dark rounded-3"
+                data-bs-dismiss="modal"
+                onclick="checkoutMessage()"
+              >
+                Proceed to Checkout
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="inquireModal"
+        tabindex="-1"
+        aria-labelledby="inquireModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content rounded-4 border-0">
+            <div class="modal-header border-bottom-0">
+              <h5 class="modal-title fw-bold" id="inquireModalLabel">
+                Got a Question? — stanburn.clo
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p class="text-muted small">
+                Hit up nahtnat's team directly for sizing help or stock
+                availability in Balibago.
+              </p>
+              <form id="inquiryForm" onsubmit="handleInquiry(event)">
+                <div class="mb-3">
+                  <label class="form-label small fw-medium">Your Name</label>
+                  <input
+                    type="text"
+                    class="form-control rounded-3"
+                    placeholder="e.g., Juan Dela Cruz"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label small fw-medium"
+                    >What's on your mind?</label
+                  >
+                  <textarea
+                    class="form-control rounded-3"
+                    rows="3"
+                    placeholder="Hey Nash, is the Polo Boxy Crop in Medium still in stock?"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark w-100 rounded-3">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div
+          id="liveToast"
+          class="toast align-items-center text-bg-dark border-0 rounded-3"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="d-flex">
+            <div class="toast-body" id="toastMessage">Added to your bag!</div>
+            <button
+              type="button"
+              class="btn-close btn-close-white me-2 m-auto"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+        </div></div
+    ></selection-tag>
+
+    <script>
+      let cart = [];
+
+      function showNotification(message) {
+        const toastEl = document.getElementById("liveToast");
+        const toastBody = document.getElementById("toastMessage");
+        toastBody.textContent = message;
+        const toast = new bootstrap.Toast(toastEl);
+        toast.show();
+      }
+
+      function addToCart(name, price) {
+        cart.push({ name, price });
+        updateCartUI();
+        showNotification(`Added "${name}" to your bag.`);
+      }
+
+      function updateCartUI() {
+        const countEl = document.getElementById("cartCount");
+        const listEl = document.getElementById("cartItemsList");
+        const totalEl = document.getElementById("cartTotal");
+
+        countEl.textContent = cart.length;
+
+        if (cart.length === 0) {
+          listEl.innerHTML =
+            '<li class="list-group-item text-muted text-center py-4">Your bag is currently empty.</li>';
+          totalEl.textContent = "₱0";
+          return;
+        }
+
+        listEl.innerHTML = "";
+        let total = 0;
+
+        cart.forEach((item) => {
+          total += item.price;
+          const li = document.createElement("li");
+          li.className =
+            "list-group-item d-flex justify-content-between align-items-center px-2";
+          li.innerHTML = `<span>${item.name}</span><span class="fw-semibold">₱${item.price.toLocaleString()}</span>`;
+          listEl.appendChild(li);
+        });
+
+        totalEl.textContent = `₱${total.toLocaleString()}`;
+      }
+
+      function clearCart() {
+        cart = [];
+        updateCartUI();
+      }
+
+      function checkoutMessage() {
+        if (cart.length === 0) {
+          showNotification("Your bag is empty. Add a piece first!");
+          return;
+        }
+        showNotification(
+          "Order received! Ready for pickup or delivery in Angeles City.",
+        );
+        clearCart();
+      }
+
+      function handleInquiry(event) {
+        event.preventDefault();
+        const modalEl = document.getElementById("inquireModal");
+        const modal = bootstrap.Modal.getInstance(modalEl);
+        modal.hide();
+        event.target.reset();
+        showNotification(
+          "Inquiry sent to stanburn.clo! We will get back to you soon.",
+        );
+      }
+
+      function previewLocalImage(event, imgId) {
+        const file = event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById(imgId).src = e.target.result;
+          showNotification("Photo loaded into preview!");
+        };
+        reader.readAsDataURL(file);
+      }
+    </script>
+
+    <footer class="bg-dark text-white py-4">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
+      >
+        <div class="fw-bold text-lowercase">stanburn.clo</div>
+        <div class="text-secondary small text-center">
+          &copy; 2026 stanburn.clo by Nash Calma. Balibago, Angeles, Pampanga.
+          All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
+
