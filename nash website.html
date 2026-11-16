@@ -10,13 +10,13 @@
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap"
     />
 
     <style>
       body {
         font-family: "Inter", sans-serif;
-        background-color: #eaeaea;
+        background-color: #fcfcfc;
         color: #111111;
         scroll-behavior: smooth;
       }
@@ -24,41 +24,83 @@
       h1,
       h2,
       h3,
+      h4,
+      h5,
       .navbar-brand {
         font-family: "Space Grotesk", sans-serif;
         letter-spacing: -0.03em;
       }
 
+      .section-subtitle {
+        letter-spacing: 0.12em;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #666666;
+      }
+
+      .navbar {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #eaeaea !important;
+      }
+
+      .nav-link {
+        font-size: 0.85rem;
+        transition: color 0.2s ease;
+      }
+
+      .nav-link:hover {
+        color: #000000 !important;
+      }
+
       .product-card {
         transition:
-          transform 0.2s ease,
-          box-shadow 0.2s ease;
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+        border: 1px solid #eaeaea !important;
       }
 
       .product-card:hover {
         transform: translateY(-4px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06) !important;
       }
 
       .product-img {
-        height: 300px;
+        height: 320px;
         object-fit: cover;
-        background-color: #f8f0f0;
+        background-color: #f4f4f4;
+      }
+
+      .editorial-header {
+        background-color: #0d0d0d;
+        color: #ffffff;
+        position: relative;
+      }
+
+      .editorial-card {
+        background: #ffffff;
+        border: 1px solid #eaeaea;
+        transition: all 0.2s ease;
+      }
+
+      .editorial-card:hover {
+        border-color: #111111;
       }
     </style>
   </head>
 
   <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-3"
-    >
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top py-3">
       <div class="container">
-        <a class="navbar-brand fw-bold fs-4 text-lowercase" href="#home"
-          >Stan city</a
+        <a
+          class="navbar-brand fw-bold fs-4 text-lowercase tracking-tight"
+          href="#home"
+          >stan<span class="text-muted fw-normal"> city</span></a
         >
 
         <button
-          class="navbar-toggler border-0"
+          class="navbar-toggler border-0 shadow-none"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -70,7 +112,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
             <li class="nav-item">
               <a class="nav-link text-dark fw-medium" href="#home">Home</a>
             </li>
@@ -83,13 +125,35 @@
               <a class="nav-link text-dark fw-medium" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark fw-medium" href="#location"
-                >Location</a
+              <a class="nav-link text-dark fw-medium" href="#target-market"
+                >Target Market</a
               >
             </li>
-            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-dark fw-medium" href="#marketing-strategy"
+                >Marketing</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-dark fw-medium"
+                href="#business-operations"
+                >Operations</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark fw-medium" href="#financial-proposal"
+                >Financials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark fw-medium" href="#contact"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
               <button
-                class="btn btn-dark btn-sm rounded-pill px-3 py-2"
+                class="btn btn-dark btn-sm rounded-pill px-4 py-2 fw-medium"
                 data-bs-toggle="modal"
                 data-bs-target="#cartModal"
               >
@@ -101,49 +165,47 @@
       </div>
     </nav>
 
-    <header id="home" class="bg-dark text-white py-5">
+    <header id="home" class="editorial-header py-5">
       <div class="container py-5">
-        <div class="row align-items-center py-4">
-          <div class="col-lg-8">
-            <span
-              class="badge bg-light text-dark text-uppercase fw-semibold px-3 py-2 rounded-pill mb-3"
+        <div class="row align-items-center py-5">
+        <div class="col-lg-8">
+          <span
+            class="badge bg-white text-dark text-uppercase fw-semibold px-3 py-2 rounded-pill mb-4"
+            style="letter-spacing: 0.1em"
+          >
+            Established in Balibago, Angeles City
+          </span>
+          <h1 class="display-3 fw-bold mb-3 tracking-tight">stanburn.clo</h1>
+          <p class="lead text-secondary mb-5 col-md-10 fw-light">
+            Boxy outlines everyday silhouettes, reliable headwear, and tailored
+            footwear that isn't served anywhere else.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a
+              href="#products"
+              class="btn btn-light btn-lg rounded-3 fw-semibold px-4 py-3 fs-6"
             >
-              Established in Balibago, Angeles City
-            </span>
-            <h1 class="display-3 fw-bold mb-3">stanburn.clo</h1>
-            <p class="lead text-secondary mb-4 col-md-10">
-              Boxy outlines everyday, reliable headwear, and fashionable shoes
-              that isn't served anywhere else.
-            </p>
-            <div class="d-flex flex-wrap gap-3">
-              <a
-                href="#products"
-                class="btn btn-light btn-lg rounded-3 fw-semibold px-4"
-              >
-                Browse Featured Releases
-              </a>
-              <a
-                href="#about"
-                class="btn btn-outline-light btn-lg rounded-3 px-4"
-              >
-                Our Story
-              </a>
-            </div>
+              Browse Featured Releases
+            </a>
+            <a
+              href="#about"
+              class="btn btn-outline-light btn-lg rounded-3 px-4 py-3 fs-6"
+            >
+              Our Story
+            </a>
           </div>
         </div>
       </div>
     </header>
 
-    <section id="products" class="py-5">
-      <div class="container py-4">
+    <section id="products" class="py-5 bg-white">
+      <div class="container py-5">
         <div
-          class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4"
+          class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5"
         >
           <div>
-            <p class="text-uppercase text-muted small fw-semibold mb-1">
-              Drop 01
-            </p>
-            <h2 class="fw-bold mb-0">The Essentials</h2>
+            <p class="section-subtitle mb-1">Drop 01</p>
+            <h2 class="fw-bold mb-0 display-6">The Essentials</h2>
           </div>
           <p class="text-muted small mb-0 mt-2 mt-md-0">
             Small batch release. Grab yours before they're gone.
@@ -152,9 +214,7 @@
 
         <div class="row g-4">
           <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden product-card"
-            >
+            <div class="card h-100 rounded-4 overflow-hidden product-card">
               <img
                 src="stburnclth.boxy.jfif"
                 class="card-img-top product-img"
@@ -164,19 +224,20 @@
                 <div
                   class="d-flex justify-content-between align-items-start mb-2"
                 >
-                  <span class="badge bg-secondary-subtle text-dark rounded-pill"
+                  <span
+                    class="badge bg-light text-dark rounded-pill border px-3 py-1"
                     >Tees</span
                   >
                   <span class="fw-bold fs-5">₱850</span>
                 </div>
-                <h5 class="card-title fw-bold">Polo Boxy Crop</h5>
+                <h5 class="card-title fw-bold mt-2">Polo Boxy Crop</h5>
                 <p class="card-text text-muted small flex-grow-1">
-                  Cotton fabric used in the manufacturing of this item,
+                  Cotton is the fabric used in the manufacturing of this item,
                   it is 280 GSM with a relaxed drop shoulder design. The garment
                   sits comfortably on the waist.
                 </p>
                 <button
-                  class="btn btn-dark w-100 rounded-3 mt-3 py-2 fw-medium"
+                  class="btn btn-dark w-100 rounded-3 mt-3 py-2.5 fw-medium"
                   onclick="addToCart('Polo Boxy Crop', 850)"
                 >
                   Add to Bag
@@ -186,9 +247,7 @@
           </div>
 
           <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden product-card"
-            >
+            <div class="card h-100 rounded-4 overflow-hidden product-card">
               <img
                 src="stanburn-capp.clo.jpg"
                 class="card-img-top product-img"
@@ -199,12 +258,13 @@
                 <div
                   class="d-flex justify-content-between align-items-start mb-2"
                 >
-                  <span class="badge bg-secondary-subtle text-dark rounded-pill"
+                  <span
+                    class="badge bg-light text-dark rounded-pill border px-3 py-1"
                     >Caps</span
                   >
                   <span class="fw-bold fs-5">₱650</span>
                 </div>
-                <h5 class="card-title fw-bold">
+                <h5 class="card-title fw-bold mt-2">
                   Balibago Flat Hammed Baseball Cap
                 </h5>
                 <p class="card-text text-muted small flex-grow-1">
@@ -213,7 +273,7 @@
                   week.
                 </p>
                 <button
-                  class="btn btn-dark w-100 rounded-3 mt-3 py-2 fw-medium"
+                  class="btn btn-dark w-100 rounded-3 mt-3 py-2.5 fw-medium"
                   onclick="addToCart('Balibago Flat Hammed Baseball Cap', 650)"
                 >
                   Add to Bag
@@ -223,32 +283,30 @@
           </div>
 
           <div class="col-12 col-md-6 col-lg-4">
-            <div
-              class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden product-card"
-            >
+            <div class="card h-100 rounded-4 overflow-hidden product-card">
               <img
                 src="stanburn-loafers.clo.jpg"
                 class="card-img-top product-img"
-                alt=" Row Loafer "
+                alt="Row Loafer"
               />
               <div class="card-body d-flex flex-column p-4">
                 <div
                   class="d-flex justify-content-between align-items-start mb-2"
                 >
-                  <span class="badge bg-secondary-subtle text-dark rounded-pill"
+                  <span
+                    class="badge bg-light text-dark rounded-pill border px-3 py-1"
                     >Footwear</span
                   >
                   <span class="fw-bold fs-5">₱1,300</span>
                 </div>
-                <h5 class="card-title fw-bold">Row Loafer</h5>
+                <h5 class="card-title fw-bold mt-2">Row Loafer</h5>
                 <p class="card-text text-muted small flex-grow-1">
-                  Constructed using leather, gathered style at the top of a
-                  vamp, and The Row, Canal, smooth and simple finish, coupled
-                  soles.
+                  Constructed using leather, gathered style at the top (the
+                  vamp), and smooth and simple finish with coupled soles.
                 </p>
                 <button
-                  class="btn btn-dark w-100 rounded-3 mt-3 py-2 fw-medium"
-                  onclick="addToCart('Row Loafer Shoe', 2450)"
+                  class="btn btn-dark w-100 rounded-3 mt-3 py-2.5 fw-medium"
+                  onclick="addToCart('Row Loafer Shoe', 1300)"
                 >
                   Add to Bag
                 </button>
@@ -259,15 +317,15 @@
       </div>
     </section>
 
-    <section id="about" class="bg-white border-top border-bottom py-5">
-      <div class="container py-4">
+    <section id="about" class="bg-light border-top border-bottom py-5">
+      <div class="container py-5">
         <div class="row g-5 align-items-center">
           <div class="col-lg-6">
-            <p class="text-uppercase text-muted small fw-semibold mb-1">
-              Behind the Label
-            </p>
-            <h2 class="fw-bold mb-3">Built from the Ground Up in Pampanga</h2>
-            <p class="text-muted">
+            <p class="section-subtitle mb-1">Behind the Label</p>
+            <h2 class="fw-bold mb-4 display-6">
+              Built from the Ground Up in Pampanga
+            </h2>
+            <p class="text-muted lead fs-6">
               Founded by <strong>Nash Calma</strong>,
               <strong>stanburn.clo</strong> started with a simple goal craft
               accessible, well-proportioned streetwear staples that feel right
@@ -281,25 +339,30 @@
           </div>
 
           <div id="location" class="col-lg-6">
-            <div class="p-4 p-md-5 bg-light rounded-4 border">
-              <span class="badge bg-dark text-white mb-2">Flagship Spot</span>
+            <div class="p-4 p-md-5 bg-white rounded-4 border shadow-sm">
+              <span class="badge bg-dark text-white mb-3 px-3 py-2 rounded-pill"
+                >Flagship Spot</span
+              >
               <h4 class="fw-bold mb-2">Visit Our Store</h4>
-              <p class="text-muted mb-3">
+              <p class="text-muted small mb-4">
                 Drop by to check sizing, feel the fabric weight, and cop
                 exclusive in-store colorways.
               </p>
-              <ul class="list-unstyled mb-4 small">
+              <ul class="list-unstyled mb-4 small text-secondary">
                 <li class="mb-2">
-                  <strong>Address:</strong> Balibago, Angeles City, Pampanga,
-                  Philippines
+                  <strong class="text-dark">Address:</strong> Balibago, Angeles
+                  City, Pampanga, Philippines
                 </li>
                 <li class="mb-2">
-                  <strong>Store Hours:</strong> Mon – Sun, 11:00 AM – 7:00 PM
+                  <strong class="text-dark">Store Hours:</strong> Mon – Sun,
+                  11:00 AM – 7:00 PM
                 </li>
-                <li><strong>Founder:</strong> Nash D. Calma</li>
+                <li>
+                  <strong class="text-dark">Founder:</strong> Nash D. Calma
+                </li>
               </ul>
               <button
-                class="btn btn-outline-dark rounded-3 btn-sm px-3 py-2"
+                class="btn btn-outline-dark rounded-3 btn-sm px-4 py-2.5 fw-medium"
                 data-bs-toggle="modal"
                 data-bs-target="#inquireModal"
               >
@@ -310,8 +373,195 @@
         </div>
       </div>
     </section>
-    <selection-tag
-      ><div
+
+    <section id="target-market" class="py-5 bg-white border-bottom">
+      <div class="container py-5">
+        <p class="section-subtitle mb-1">Audience & Demographics</p>
+        <h2 class="fw-bold mb-5 display-6">Target Market</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="p-4 editorial-card rounded-4 h-100">
+              <h5 class="fw-bold mb-3">Gen Z & Millennials</h5>
+              <p class="text-muted small mb-0">
+                Fashion-aware youths within the age group of 16-28 living in
+                cities such as Angeles City and Pampanga.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 editorial-card rounded-4 h-100">
+              <h5 class="fw-bold mb-3">Streetwear Fanatics</h5>
+              <p class="text-muted small mb-0">
+                People that appreciate blocky shapes, heavy materials (280 GSM),
+                minimalistic labels, and specific types of footwear.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 editorial-card rounded-4 h-100">
+              <h5 class="fw-bold mb-3">Campus & Local Community</h5>
+              <p class="text-muted small mb-0">
+                Students and professionals who are looking for affordable,
+                quality, locally-made fashion items for everyday use.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="marketing-strategy" class="py-5 bg-light border-bottom">
+      <div class="container py-5">
+        <p class="section-subtitle mb-1">Brand Growth & Outreach</p>
+        <h2 class="fw-bold mb-5 display-6">Marketing Strategy</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="p-4 bg-white rounded-4 h-100 border shadow-sm">
+              <h5 class="fw-bold mb-3">Digital & Social Media Presence</h5>
+              <p class="text-muted small mb-0">
+                Utilizing Instagram, TikTok, and community networks in
+                showcasing drop teasers, styling reels, and the
+                behind-the-scenes footage of local production in Pampanga.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-4 bg-white rounded-4 h-100 border shadow-sm">
+              <h5 class="fw-bold mb-3">Limited Small-Batch Drops</h5>
+              <p class="text-muted small mb-0">
+                Creating a sense of scarcity and urgency through the release of
+                limited quantities ("Drop 01", "Drop 02").
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="business-operations" class="py-5 bg-white border-bottom">
+      <div class="container py-5">
+        <p class="section-subtitle mb-1">Execution & Supply Chain</p>
+        <h2 class="fw-bold mb-5 display-6">Business Operations</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="p-4 editorial-card rounded-4 h-100">
+              <h5 class="fw-bold mb-3">Sourcing & Production</h5>
+              <p class="text-muted small mb-0">
+                Working with reliable local manufacturers of 280 GSM cotton
+                fabric, superior quality hardware, and assembling leather goods.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 editorial-card rounded-4 h-100">
+              <h5 class="fw-bold mb-3">Inventory Management</h5>
+              <p class="text-muted small mb-0">
+                Operated on a small batch inventory system in order to avoid
+                dead stock, high-quality control, and product exclusivity.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 editorial-card rounded-4 h-100">
+              <h5 class="fw-bold mb-3">Fulfillment & Delivery</h5>
+              <p class="text-muted small mb-0">
+                Direct pick-ups from Balibago, Angeles City, along with local
+                couriers within Pampanga and throughout the Philippines.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="financial-proposal" class="py-5 bg-light border-bottom">
+      <div class="container py-5">
+        <p class="section-subtitle mb-1">Investment & Projections</p>
+        <h2 class="fw-bold mb-5 display-6">Financial Proposal</h2>
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <p class="text-muted lead fs-6">
+              The <strong>stanburn.clo</strong> opresents a convenient option
+              for investing in retail growth, procurement of bulk raw materials,
+              and marketing efforts for future season releases.
+            </p>
+            <ul class="list-unstyled text-muted small mb-4">
+              <li class="mb-3">
+                <strong>Initial Allocation:</strong> caling production batch and
+                optimizing flagship spot in Balibago.
+              </li>
+              <li class="mb-3">
+                <strong>Income Sources:</strong> Direct-to-consumer web orders,
+                store flagship sales, and drop pre-sales.
+              </li>
+
+              <li>
+                <strong>Growth Forecast:</strong> Growing capsule collections
+                and shoe ranges throughout Central Luzon.
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-4 bg-white rounded-4 border shadow-sm">
+              <h4 class="fw-bold mb-4">Investment Highlights</h4>
+              <div
+                class="d-flex justify-content-between border-bottom py-3 small"
+              >
+                <span class="text-muted">Target Funding Use</span>
+                <span class="fw-semibold">Inventory & Marketing</span>
+              </div>
+              <div
+                class="d-flex justify-content-between border-bottom py-3 small"
+              >
+                <span class="text-muted">Average Margin</span>
+                <span class="fw-semibold">High Retail Markup</span>
+              </div>
+              <div class="d-flex justify-content-between py-3 small">
+                <span class="text-muted">ROI Timeline</span>
+                <span class="fw-semibold">6 – 12 Months</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-white border-bottom">
+      <div class="container py-5">
+        <p class="section-subtitle mb-1">Get in Touch</p>
+        <h2 class="fw-bold mb-5 display-6">Contact Information</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="p-4 editorial-card rounded-4 h-100">
+              <h5 class="fw-bold mb-3">Location</h5>
+              <p class="text-muted small mb-0">
+                Balibago, Angeles City, Pampanga, Philippines
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 editorial-card rounded-4 h-100">
+              <h5 class="fw-bold mb-3">Direct Inquiry</h5>
+              <p class="text-muted small mb-0">
+                Founder: Nash D. Calma<br />Email: support@stanbcity.clo<br />Phone:
+                +63 900 401 0760
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 editorial-card rounded-4 h-100">
+              <h5 class="fw-bold mb-3">Store Hours</h5>
+              <p class="text-muted small mb-0">
+                Monday – Sunday<br />11:00 AM – 7:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <selection-tag>
+      <div
         class="modal fade"
         id="cartModal"
         tabindex="-1"
@@ -319,8 +569,8 @@
         aria-hidden="true"
       >
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content rounded-4 border-0">
-            <div class="modal-header border-bottom-0">
+          <div class="modal-content rounded-4 border-0 shadow-lg">
+            <div class="modal-header border-bottom-0 pt-4 px-4">
               <h5 class="modal-title fw-bold" id="cartModalLabel">
                 Your Shopping Bag
               </h5>
@@ -331,7 +581,7 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body px-4">
               <ul id="cartItemsList" class="list-group list-group-flush mb-3">
                 <li class="list-group-item text-muted text-center py-4">
                   Nothing in your bag yet. Time to cop something!
@@ -342,17 +592,17 @@
                 <span id="cartTotal">₱0</span>
               </div>
             </div>
-            <div class="modal-footer border-top-0">
+            <div class="modal-footer border-top-0 pb-4 px-4">
               <button
                 type="button"
-                class="btn btn-outline-secondary rounded-3"
+                class="btn btn-outline-secondary rounded-3 px-4"
                 onclick="clearCart()"
               >
                 Empty Bag
               </button>
               <button
                 type="button"
-                class="btn btn-dark rounded-3"
+                class="btn btn-dark rounded-3 px-4"
                 data-bs-dismiss="modal"
                 onclick="checkoutMessage()"
               >
@@ -371,8 +621,8 @@
         aria-hidden="true"
       >
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content rounded-4 border-0">
-            <div class="modal-header border-bottom-0">
+          <div class="modal-content rounded-4 border-0 shadow-lg">
+            <div class="modal-header border-bottom-0 pt-4 px-4">
               <h5 class="modal-title fw-bold" id="inquireModalLabel">
                 Got a Question? — stanburn.clo
               </h5>
@@ -383,9 +633,9 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body px-4">
               <p class="text-muted small">
-                Hit up nahtnat's team directly for sizing help or stock
+                Hit up Nash's team directly for sizing help or stock
                 availability in Balibago.
               </p>
               <form id="inquiryForm" onsubmit="handleInquiry(event)">
@@ -393,7 +643,7 @@
                   <label class="form-label small fw-medium">Your Name</label>
                   <input
                     type="text"
-                    class="form-control rounded-3"
+                    class="form-control rounded-3 py-2.5"
                     placeholder="e.g., Juan Dela Cruz"
                     required
                   />
@@ -409,7 +659,10 @@
                     required
                   ></textarea>
                 </div>
-                <button type="submit" class="btn btn-dark w-100 rounded-3">
+                <button
+                  type="submit"
+                  class="btn btn-dark w-100 rounded-3 py-2.5 fw-medium"
+                >
                   Send Message
                 </button>
               </form>
@@ -421,13 +674,15 @@
       <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div
           id="liveToast"
-          class="toast align-items-center text-bg-dark border-0 rounded-3"
+          class="toast align-items-center text-bg-dark border-0 rounded-3 shadow-lg"
           role="alert"
           aria-live="assertive"
           aria-atomic="true"
         >
           <div class="d-flex">
-            <div class="toast-body" id="toastMessage">Added to your bag!</div>
+            <div class="toast-body py-3" id="toastMessage">
+              Added to your bag!
+            </div>
             <button
               type="button"
               class="btn-close btn-close-white me-2 m-auto"
@@ -435,8 +690,9 @@
               aria-label="Close"
             ></button>
           </div>
-        </div></div
-    ></selection-tag>
+        </div>
+      </div>
+    </selection-tag>
 
     <script>
       let cart = [];
@@ -476,7 +732,7 @@
           total += item.price;
           const li = document.createElement("li");
           li.className =
-            "list-group-item d-flex justify-content-between align-items-center px-2";
+            "list-group-item d-flex justify-content-between align-items-center px-2 py-3";
           li.innerHTML = `<span>${item.name}</span><span class="fw-semibold">₱${item.price.toLocaleString()}</span>`;
           listEl.appendChild(li);
         });
@@ -510,24 +766,15 @@
           "Inquiry sent to stanburn.clo! We will get back to you soon.",
         );
       }
-
-      function previewLocalImage(event, imgId) {
-        const file = event.target.files[0];
-        if (!file) return;
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          document.getElementById(imgId).src = e.target.result;
-          showNotification("Photo loaded into preview!");
-        };
-        reader.readAsDataURL(file);
-      }
     </script>
 
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-dark text-white py-5">
       <div
-        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
       >
-        <div class="fw-bold text-lowercase">stanburn.clo</div>
+        <div class="fw-bold text-lowercase fs-5">
+          stanburn<span class="text-secondary">.clo</span>
+        </div>
         <div class="text-secondary small text-center">
           &copy; 2026 stanburn.clo by Nash Calma. Balibago, Angeles, Pampanga.
           All rights reserved.
