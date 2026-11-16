@@ -475,4 +475,333 @@
           <div class="col-md-4">
             <div class="p-4 editorial-card rounded-4 h-100">
               <h5 class="fw-bold mb-3">Inventory Management</h5>
-              <p
+              <p class="text-muted small mb-0">
+                Operated on a small batch inventory system in order to avoid
+                dead stock, high-quality control, and product exclusivity.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 editorial-card rounded-4 h-100">
+              <h5 class="fw-bold mb-3">Fulfillment & Delivery</h5>
+              <p class="text-muted small mb-0">
+                Direct pick-ups from Balibago, Angeles City, along with local
+                couriers within Pampanga and throughout the Philippines.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="financial-proposal" class="py-5 bg-light border-bottom">
+      <div class="container py-5">
+        <p class="section-subtitle mb-1">Investment & Projections</p>
+        <h2 class="fw-bold mb-5 display-6">Financial Proposal</h2>
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <p class="text-muted lead fs-6">
+              The <strong>stanburn.clo</strong> opresents a convenient option
+              for investing in retail growth, procurement of bulk raw materials,
+              and marketing efforts for future season releases.
+            </p>
+            <ul class="list-unstyled text-muted small mb-4">
+              <li class="mb-3">
+                <strong>Initial Allocation:</strong> caling production batch and
+                optimizing flagship spot in Balibago.
+              </li>
+              <li class="mb-3">
+                <strong>Income Sources:</strong> Direct-to-consumer web orders,
+                store flagship sales, and drop pre-sales.
+              </li>
+
+              <li>
+                <strong>Growth Forecast:</strong> Growing capsule collections
+                and shoe ranges throughout Central Luzon.
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-4 bg-white rounded-4 border shadow-sm">
+              <h4 class="fw-bold mb-4">Investment Highlights</h4>
+              <div
+                class="d-flex justify-content-between border-bottom py-3 small"
+              >
+                <span class="text-muted">Target Funding Use</span>
+                <span class="fw-semibold">Inventory & Marketing</span>
+              </div>
+              <div
+                class="d-flex justify-content-between border-bottom py-3 small"
+              >
+                <span class="text-muted">Average Margin</span>
+                <span class="fw-semibold">High Retail Markup</span>
+              </div>
+              <div class="d-flex justify-content-between py-3 small">
+                <span class="text-muted">ROI Timeline</span>
+                <span class="fw-semibold">6 – 12 Months</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-white border-bottom">
+      <div class="container py-5">
+        <p class="section-subtitle mb-1">Get in Touch</p>
+        <h2 class="fw-bold mb-5 display-6">Contact Information</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="p-4 editorial-card rounded-4 h-100">
+              <h5 class="fw-bold mb-3">Location</h5>
+              <p class="text-muted small mb-0">
+                Balibago, Angeles City, Pampanga, Philippines
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 editorial-card rounded-4 h-100">
+              <h5 class="fw-bold mb-3">Direct Inquiry</h5>
+              <p class="text-muted small mb-0">
+                Founder: Nash D. Calma<br />Email: support@stanbcity.clo<br />Phone:
+                +63 969 401 0760
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 editorial-card rounded-4 h-100">
+              <h5 class="fw-bold mb-3">Store Hours</h5>
+              <p class="text-muted small mb-0">
+                Monday – Sunday<br />11:00 AM – 7:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <selection-tag>
+      <div
+        class="modal fade"
+        id="cartModal"
+        tabindex="-1"
+        aria-labelledby="cartModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content rounded-4 border-0 shadow-lg">
+            <div class="modal-header border-bottom-0 pt-4 px-4">
+              <h5 class="modal-title fw-bold" id="cartModalLabel">
+                Your Shopping Bag
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body px-4">
+              <ul id="cartItemsList" class="list-group list-group-flush mb-3">
+                <li class="list-group-item text-muted text-center py-4">
+                  Nothing in your bag yet. Time to cop something!
+                </li>
+              </ul>
+              <div class="d-flex justify-content-between fw-bold fs-5 px-2">
+                <span>Total:</span>
+                <span id="cartTotal">₱0</span>
+              </div>
+            </div>
+            <div class="modal-footer border-top-0 pb-4 px-4">
+              <button
+                type="button"
+                class="btn btn-outline-secondary rounded-3 px-4"
+                onclick="clearCart()"
+              >
+                Empty Bag
+              </button>
+              <button
+                type="button"
+                class="btn btn-dark rounded-3 px-4"
+                data-bs-dismiss="modal"
+                onclick="checkoutMessage()"
+              >
+                Proceed to Checkout
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="inquireModal"
+        tabindex="-1"
+        aria-labelledby="inquireModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content rounded-4 border-0 shadow-lg">
+            <div class="modal-header border-bottom-0 pt-4 px-4">
+              <h5 class="modal-title fw-bold" id="inquireModalLabel">
+                Got a Question? — stanburn.clo
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body px-4">
+              <p class="text-muted small">
+                Hit up Calma's team directly for sizing help or stock
+                availability in Balibago.
+              </p>
+              <form id="inquiryForm" onsubmit="handleInquiry(event)">
+                <div class="mb-3">
+                  <label class="form-label small fw-medium">Your Name</label>
+                  <input
+                    type="text"
+                    class="form-control rounded-3 py-2.5"
+                    placeholder="e.g., Juan Dela Cruz"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label small fw-medium"
+                    >What's on your mind?</label
+                  >
+                  <textarea
+                    class="form-control rounded-3"
+                    rows="3"
+                    placeholder="Hey Nash, is the Polo Boxy Crop in Medium still in stock?"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-dark w-100 rounded-3 py-2.5 fw-medium"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div
+          id="liveToast"
+          class="toast align-items-center text-bg-dark border-0 rounded-3 shadow-lg"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="d-flex">
+            <div class="toast-body py-3" id="toastMessage">
+              Added to your bag!
+            </div>
+            <button
+              type="button"
+              class="btn-close btn-close-white me-2 m-auto"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </selection-tag>
+
+    <script>
+      let cart = [];
+
+      function showNotification(message) {
+        const toastEl = document.getElementById("liveToast");
+        const toastBody = document.getElementById("toastMessage");
+        toastBody.textContent = message;
+        const toast = new bootstrap.Toast(toastEl);
+        toast.show();
+      }
+
+      function addToCart(name, price) {
+        cart.push({ name, price });
+        updateCartUI();
+        showNotification(`Added "${name}" to your bag.`);
+      }
+
+      function updateCartUI() {
+        const countEl = document.getElementById("cartCount");
+        const listEl = document.getElementById("cartItemsList");
+        const totalEl = document.getElementById("cartTotal");
+
+        countEl.textContent = cart.length;
+
+        if (cart.length === 0) {
+          listEl.innerHTML =
+            '<li class="list-group-item text-muted text-center py-4">Your bag is currently empty.</li>';
+          totalEl.textContent = "₱0";
+          return;
+        }
+
+        listEl.innerHTML = "";
+        let total = 0;
+
+        cart.forEach((item) => {
+          total += item.price;
+          const li = document.createElement("li");
+          li.className =
+            "list-group-item d-flex justify-content-between align-items-center px-2 py-3";
+          li.innerHTML = `<span>${item.name}</span><span class="fw-semibold">₱${item.price.toLocaleString()}</span>`;
+          listEl.appendChild(li);
+        });
+
+        totalEl.textContent = `₱${total.toLocaleString()}`;
+      }
+
+      function clearCart() {
+        cart = [];
+        updateCartUI();
+      }
+
+      function checkoutMessage() {
+        if (cart.length === 0) {
+          showNotification("Your bag is empty. Add a piece first!");
+          return;
+        }
+        showNotification(
+          "Notice: This is a display website project. You cannot order items directly.",
+        );
+      }
+
+      function handleInquiry(event) {
+        event.preventDefault();
+        const modalEl = document.getElementById("inquireModal");
+        const modal = bootstrap.Modal.getInstance(modalEl);
+        modal.hide();
+        event.target.reset();
+        showNotification(
+          "Inquiry sent to stanburn.clo! We will get back to you soon.",
+        );
+      }
+    </script>
+
+    <footer class="bg-dark text-white py-5">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
+      >
+        <div class="fw-bold text-lowercase fs-5">
+          stanburn<span class="text-secondary">.clo</span>
+        </div>
+        <div class="text-secondary small text-center">
+          &copy; 2026 stanburn.clo by Nash Calma. Balibago, Angeles, Pampanga.
+          All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+```[cite: 1]
