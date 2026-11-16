@@ -94,10 +94,18 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top py-3">
       <div class="container">
         <a
-          class="navbar-brand fw-bold fs-4 text-lowercase tracking-tight"
+          class="navbar-brand fw-bold fs-4 text-lowercase tracking-tight d-flex align-items-center gap-2"
           href="#home"
-          >stan<span class="text-muted fw-normal"> city</span></a
         >
+          <img
+            src="StanBurncity.clo.png"
+            alt="StanBurncity.clo.png"
+            width="40"
+            height="40"
+            class="d-inline-block align-text-top rounded-circle"
+          />
+          <span>stan<span class="text-muted fw-normal"> city</span></span>
+        </a>
 
         <button
           class="navbar-toggler border-0 shadow-none"
@@ -168,31 +176,32 @@
     <header id="home" class="editorial-header py-5">
       <div class="container py-5">
         <div class="row align-items-center py-5">
-        <div class="col-lg-8">
-          <span
-            class="badge bg-white text-dark text-uppercase fw-semibold px-3 py-2 rounded-pill mb-4"
-            style="letter-spacing: 0.1em"
-          >
-            Established in Balibago, Angeles City
-          </span>
-          <h1 class="display-3 fw-bold mb-3 tracking-tight">stanburn.clo</h1>
-          <p class="lead text-secondary mb-5 col-md-10 fw-light">
-            Boxy outlines everyday silhouettes, reliable headwear, and tailored
-            footwear that isn't served anywhere else.
-          </p>
-          <div class="d-flex flex-wrap gap-3">
-            <a
-              href="#products"
-              class="btn btn-light btn-lg rounded-3 fw-semibold px-4 py-3 fs-6"
+          <div class="col-lg-8">
+            <span
+              class="badge bg-white text-dark text-uppercase fw-semibold px-3 py-2 rounded-pill mb-4"
+              style="letter-spacing: 0.1em"
             >
-              Browse Featured Releases
-            </a>
-            <a
-              href="#about"
-              class="btn btn-outline-light btn-lg rounded-3 px-4 py-3 fs-6"
-            >
-              Our Story
-            </a>
+              Established in Balibago, Angeles City
+            </span>
+            <h1 class="display-3 fw-bold mb-3 tracking-tight">stanburn.clo</h1>
+            <p class="lead text-secondary mb-5 col-md-10 fw-light">
+              Boxy outlines everyday silhouettes, reliable headwear, and
+              tailored footwear that isn't served anywhere else.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a
+                href="#products"
+                class="btn btn-light btn-lg rounded-3 fw-semibold px-4 py-3 fs-6"
+              >
+                Browse Featured Releases
+              </a>
+              <a
+                href="#about"
+                class="btn btn-outline-light btn-lg rounded-3 px-4 py-3 fs-6"
+              >
+                Our Story
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -750,10 +759,10 @@
           showNotification("Your bag is empty. Add a piece first!");
           return;
         }
+        // Updated check notice code for display website project
         showNotification(
-          "Order received! Ready for pickup or delivery in Angeles City.",
+          "Notice: This is a display website project. You cannot order items directly.",
         );
-        clearCart();
       }
 
       function handleInquiry(event) {
